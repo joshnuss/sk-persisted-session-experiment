@@ -1,4 +1,4 @@
-An experiment with SvelteKit + persisted sessions.
+# Experiment with SvelteKit + persisted sessions
 
 - Each request is assigned a `sessionId`
 - The `sessionId` is encrypted and stored in a cookie
