@@ -1,4 +1,5 @@
 import { encryptString, decryptString } from 'string-cipher';
+import { randomBytes } from 'crypto'
 
 function parseSessionId(event) {
 	const cookieString = event.request.headers.get('cookie')
@@ -13,8 +14,7 @@ function parseSessionId(event) {
 }
 
 function generateSessionId() {
-	// TODO: use secure generator
-	return '12345'
+	return randomBytes(48).toString('hex')
 }
 
 export function handleCookies(options = {}) {
